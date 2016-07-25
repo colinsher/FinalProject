@@ -1,0 +1,90 @@
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    padding: 5px;
+    margin: 5px;
+}
+
+#backfade{
+    width: 120%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    display: block;
+    top:150px;
+    left: -10px;
+    z-index: 1;
+}
+
+#frontfade{
+    width: 104%;
+    height: 150px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    display: block;
+    margin: 0px;
+    z-index: 2;
+    left: -2%;
+    top: -0px;
+    float: left;
+    padding: auto;
+}
+.header{
+    color:white;
+    z-index: 0;
+    text-align: center;
+    margin:auto;
+}
+#header{
+    left: 2%;
+    top: 4%;
+    margin-top: 20px;
+    max-height:140px;
+}
+
+.album_choices{
+    display: inline;
+    margin:auto;
+    color:white;
+    padding: 20px;
+}
+#album_names{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#slideshow{
+    background-color:rgba(0,0,0,0.5);
+    position:fixed;
+    display: block;
+    width:75%;
+    height: 80%;
+    margin-left: 12.5%;
+    margin-top:35px;
+    max-height: calc(100% - 200px);
+    border-style: solid;
+    border-color: rgba(0,0,0,0.7);
+    border-width: 5px;
+    border-radius: 5px;
+}
+
+#picture{
+    height: 98%;
+    display: block;
+    width: 95%;
+    margin-top: 0.5%;
+    margin-left: 2.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#buttons{
+    position: fixed;
+    display: block;
+    height:25px;
+    margin-top:5px;
+    left: 50%;
+    transform: translate(-50%);
+}

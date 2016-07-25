@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sections>
+    <page name="Contact">
+        <p><a id="email" href="mailto:colinjsherman@gmail.com">colinjsherman@gmail.com</a></p>
+        <p><a class="phone-mobile" href="tel:1-704-604-9327">704-604-9327</a></p>
+    </page>
+    <page name="Resume" href="CSresume2016.pdf">
+        <a href="CSresume2016.pdf">Resume</a>
+    </page>
+    <page name="Video" href="http://www.youtube.com">
+        <a href="http://www.youtube.com">Youtube</a>
+    </page>
+    <page name="Social Media">
+        <p id="twitter" class="twitter"><a class="twitter" href="http://www.twitter.com/ColinSherman">Twitter</a></p>
+        <p id="facebook" class="facebook"><a class="facebook" href="http://www.facebook.com">Facebook</a></p>
+        <p id="tumblr" class="tumblr"><a class="tumblr" href="http://cs-2187.tumblr.com">Tumblr</a></p>
+    </page>
+</sections>
