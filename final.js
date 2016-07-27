@@ -2,10 +2,11 @@
  * Created by colinjsherman on 7/19/16.
  */
 
-
+//hides picture things
 document.getElementById("slideshow").style.display = "none";
 document.getElementById("buttons").style.display = "none";
 
+//creates arrays of "albums" of image links within object, albums
 var albums = {
     "Disney":[
         "https://otfapa-ch3302.files.1drv.com/y3mFecVLz0B_tqwuSZNv-fYXWLMoA5KldtAEzzqk8zZs0sf_JWp_jveRSa7W_tcQaQCKKa6PYl-r51DpADnU_uGxt7apEHgYph8qzIMXfDnbPxy6DjhLf1IeT-V_lkvQh-4lI3VVoFcLxS38-3_foXrHo2UrjWFi6hRXe1JuPbqLVk?width=1024\u0026height=679\u0026cropmode=none",
@@ -114,7 +115,7 @@ for(arr in albums){
     }
 }
 
-//function to handle changes:
+//function to handle changing background:
 var backgroundChange = function(){
     var whichImg = Math.floor(Math.random()*allArrays.length);
     document.body.style.backgroundImage = 'url('+allArrays[whichImg]+')';
@@ -122,19 +123,19 @@ var backgroundChange = function(){
     setTimeout(backgroundChange,10000);
 };
 
-window.addEventListener("load",backgroundChange);
+window.addEventListener("load",backgroundChange);//starts setting background pictures when the window loads
 
 //alert("\u0026");
 
-var displayPic = 0;
+var displayPic = 0;//variable that will be used to scroll through pictures in an album
 
-var thisAlbum=albums["Disney"];
+var thisAlbum=albums["Disney"];//variable that will be set with album buttons
 
 //function to change picture
 var newPic = function(){
-    $("#picture").fadeOut("slow",function(){
+    $('#picture').fadeOut("slow",function(){
         document.getElementById("picture").style.backgroundImage = 'url('+thisAlbum[displayPic]+')';
-        $("#picture").fadeIn("fast");
+        $('#picture').fadeIn("fast");
     });
 };
 
@@ -143,10 +144,11 @@ var startShow = function(album){
     thisAlbum = albums[album];
     console.log("clicked on "+album);
     console.log("first url: "+thisAlbum[0]);
-    document.getElementById("slideshow").style.display = "initial";
-    document.getElementById("buttons").style.display = "initial";
-    displayPic = 0;
-    document.getElementById("picture").style.backgroundImage = 'url('+thisAlbum[displayPic]+')';
+    document.getElementById("slideshow").style.display = "initial";//show pictures box
+    document.getElementById("buttons").style.display = "initial";//show left/right buttons
+    displayPic = 0;//first picture in album
+    document.getElementById("picture").style.backgroundImage = 'url('+thisAlbum[displayPic]+')';//sets image
+    //functions to handle moving through different pictures:
     document.getElementById("left").addEventListener("click",function(){
         if(displayPic>0){
             displayPic --;
@@ -173,12 +175,12 @@ var startShow = function(album){
     });
 };
 
-//Fill Header with albums
+//Fill Header with albums buttons
 for(arr in albums){
     $('#album_names').append('<input type="button" id="'+arr+'" class="album_choices" value="'+arr+'">');
     console.log(arr);
 }
 $('.album_choices').click(function(){
     console.log(this.id+" clicked!");
-    startShow(this.id)
+    startShow(this.id);
 });
